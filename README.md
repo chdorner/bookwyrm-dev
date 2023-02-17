@@ -40,6 +40,17 @@ For each instance (`dev-lit` and `dev-sci`):
     4. `./dev-lit/manage collectstatic`, plus the same command for `dev-sci`
     5. `./dev-lit/manage admin_code`, plus the same command for `dev-sci`
 
+Additionally to test how federation looks in other ActivityPub services, there's a [takahe](https://github.com/jointakahe/takahe) setup available, to set this up you'll need to:
+
+1. Copy `.env.local.example` and configure the variables, this file can be used to override any value from `.env`
+2. Configure the CloudFlare tunnel (see [this post](https://amble.blog/2023/01/29/a-local-developent-setup-for-bookwyrm-federation/) for more detailed instructions), then copy and configure `cloudflared-tunnel.yaml.example`
+3. Create a database, use the same name as in `TAKAHE_DATABASE_SERVER` configuration (i.e. `takahe`)
+4. Use the `manage` script to run commands for setting up a new instance:
+    1. `./takahe/manage migrate`
+5. When having takahe up and running sign up your first user with the same email address as defined
+   in `TAKAHE_AUTO_ADMIN_EMAIL`. The confirmation link will be available in the console which prints
+   out the whole signup email that isn't being actually sent in this setup.
+
 ## Running
 
 This setup comes with a `Procfile`, feel free to use your favourite process manager like [foreman](https://github.com/ddollar/foreman) or [hivemind](https://github.com/DarthSim/hivemind).

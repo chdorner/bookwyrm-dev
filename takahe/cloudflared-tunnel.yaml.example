@@ -1,0 +1,5 @@
+url: http://localhost:5060
+# Tunnel ID
+tunnel:
+# Path to credentials file, usually $HOME/.cloudflared/{tunnel id}.json
+credentials-file:

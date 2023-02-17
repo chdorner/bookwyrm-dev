@@ -9,3 +9,7 @@ sci-worker: ./dev-sci/worker
 sci-scheduler: ./dev-sci/scheduler
 sci-flower: ./dev-sci/flower
 sci-tunnel: cloudflared tunnel --config ./dev-sci/cloudflared-tunnel.yaml run
+
+takahe-web: ./takahe/web
+takahe-worker: ./takahe/worker
+takahe-tunnel: cloudflared tunnel --config ./takahe/cloudflared-tunnel.yaml run
