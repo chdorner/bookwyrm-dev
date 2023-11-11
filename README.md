@@ -1,3 +1,5 @@
+# MOVED TO CODEBERG - [codeberg.org/chdorner/bookwyrm-dev](https://codeberg.org/chdorner/bookwyrm-dev)
+
 # Local BookWyrm development environment
 
 For a more detailed description and instructions see [this blog post](https://amble.blog/2023/01/29/a-local-developent-setup-for-bookwyrm-federation/).
